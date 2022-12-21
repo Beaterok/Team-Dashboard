@@ -74,7 +74,7 @@ function internCard(Intern){
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID:${Intern.id}</li>
             <li class="list-group-item">Email:${Intern.email}</li>
-            <li class="list-group-item">Office:${Intern.officeNumber}</li>
+            <li class="list-group-item">Office:${Intern.school}</li>
         </ul>
     </div>
 </div>
