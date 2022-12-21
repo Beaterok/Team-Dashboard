@@ -36,9 +36,9 @@ function managerCard(Manager){
             <p class="card-text">Manager</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:${Manager.id}</li>
-            <li class="list-group-item">Email:${Manager.email}</li>
-            <li class="list-group-item">Office:${Manager.officeNumber}</li>
+            <li class="list-group-item">ID: ${Manager.id}</li>
+            <li class="list-group-item">Email: ${Manager.email}</li>
+            <li class="list-group-item">Office: ${Manager.officeNumber}</li>
         </ul>
     </div>
 </div>
@@ -54,9 +54,9 @@ function engineerCard(Engineer){
             <p class="card-text">Engineer</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:${Engineer.id}</li>
-            <li class="list-group-item">Email:${Engineer.email}</li>
-            <li class="list-group-item">Github:${Engineer.getGithub()}</li>
+            <li class="list-group-item">ID: ${Engineer.id}</li>
+            <li class="list-group-item">Email: ${Engineer.email}</li>
+            <li class="list-group-item">Github: ${Engineer.getGithub()}</li>
         </ul>
     </div>
 </div>
@@ -68,13 +68,13 @@ function internCard(Intern){
     <div class="col-2">
     <div class="card" style="width: 18rem;">
         <div class="card-body bg-primary text-white">
-            <h5 class="card-title">${Intern.name}</h5>
+            <h5 class="card-title"> ${Intern.name}</h5>
             <p class="card-text">Intern</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:${Intern.id}</li>
-            <li class="list-group-item">Email:${Intern.email}</li>
-            <li class="list-group-item">Office:${Intern.school}</li>
+            <li class="list-group-item">ID: ${Intern.id}</li>
+            <li class="list-group-item">Email: ${Intern.email}</li>
+            <li class="list-group-item">Office: ${Intern.school}</li>
         </ul>
     </div>
 </div>
