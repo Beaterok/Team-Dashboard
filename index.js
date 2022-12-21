@@ -5,7 +5,7 @@ const Intern = require('./lib/Intern')
 const generateHTML = require('./src/generateHTML')
 const fs = require('fs')
 
-const team = [];
+let team = [];
 
 const init =() =>{
     inquirer.prompt([
@@ -52,8 +52,9 @@ function menu(){
             return addEngineer();
         } else if (data.add =='Intern'){
             return addIntern();
-        }else 
-        return writeFile();
+        }else{
+            return writeFile();
+        }
     })
 };
 
@@ -75,13 +76,13 @@ function addEngineer(){
             message:'Engineers Email:'
         },
         {
-            type:'number',
-            name: 'git',
+            type:'input',
+            name: 'github',
             message:'Engineers GitHub:'
         }
     ])
     .then((data) =>{
-        const engineer = new Engineer(data.name,data.id,data.email,data.git);
+        const engineer = new Engineer(data.name,data.id,data.email,data.github);
         team.push(engineer);
 
         menu();
@@ -106,7 +107,7 @@ function addIntern(){
             message:'Intern Email:'
         },
         {
-            type:'number',
+            type:'input',
             name: 'school',
             message:'Intern School:'
         }
@@ -120,6 +121,7 @@ function addIntern(){
 }
 
 function writeFile(){
+    console.log(generateHTML(team))
     fs.writeFileSync('./dist/index.html', generateHTML(team));
 }
 
